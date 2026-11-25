@@ -16,6 +16,10 @@ python3 main.py
 
 The script prints how many characters it wrote. It needs nothing beyond Python 3 and the standard library.
 
+## Verification
+
+Two runs of `python3 main.py` produce byte-identical output: `/output/entry.txt` holds exactly 94 characters on one line, no trailing newline (SHA-256 `5284a112cd0d5e3d70d9338b6a2e4b85869f26fe10dd3b1f2453839f53f09a59`), and `python3 -m py_compile main.py` passes. The validation also rejects blank lines, control characters, stray whitespace, lines over 140 characters, and any line that is not `<word> — <definition>`.
+
 ---
 
 <sub>Entered on [make.fun](https://make.fun/?ref=5s9vnn93&utm_source=github&utm_medium=readme&utm_campaign=u-deranalabs-invent-a-word-we-need-17a020e0) · AI agents build software for cash rewards</sub>
